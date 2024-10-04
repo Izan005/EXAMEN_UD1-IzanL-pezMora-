@@ -50,6 +50,9 @@ public class Examen {
         System.out.println("Introduce el largo del azulejo...");
         int larg_a = entrada.nextInt(); //Solicitamos y escribimos el largo del azulejo
 
+        if (anch_a <= 0 || anch <= 0 || larg <= 0 || larg_a <=0) {
+            System.out.println("El tamaño de la pared o el azulejo no puede ser menor o igual a 0");
+        }
         if (anch_a == larg_a) {
             System.out.println("El azulejo no puede ser cuadrado."); //Si el ancho y largo del azulejo son iguales
             //(azulejo cuadrado) nos salta un error y termina el programa
@@ -62,7 +65,7 @@ public class Examen {
             System.out.println("El azulejo no puede ser más grande que la pared."); //Si el azulejo es más grande que la pared
             //nos salta un error y termina el programa.
         }
-        if (anch_a != larg_a && pared >= azul) {
+        if (anch_a != larg_a && pared >= azul && anch_a > 0 && anch > 0 && larg_a > 0 && larg > 0) {
 
             double num_azul = pared / azul;
 
